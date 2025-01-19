@@ -1,4 +1,6 @@
-### Demo Videos
+### multi-threaded-tcp-server
+
+TCP server in Go using raw sockets. The server listens on a specific port, accepts incoming connections, processes basic HTTP requests, and sends back responses. It covers essential concepts like socket programming, system calls, and handling requests.
 
 #### Sequencial Processing 
 
