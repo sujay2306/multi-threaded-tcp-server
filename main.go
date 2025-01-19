@@ -15,7 +15,7 @@ func do(conn net.Conn){
 		log.Fatal(err)
 	}
 	log.Println("processing the request")
-	time.Sleep(8 * time.Second) //wait for 1 sec
+	time.Sleep(8 * time.Second) //wait for 8 sec
 	conn.Write([] byte ("HTTP/1.1 200 OK\r\n\r\nHello I'm TCP Server!!!\r\n"))
 	conn.Close()
 }
