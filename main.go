@@ -33,7 +33,7 @@ func main(){
 			log.Fatal(err)
 		}
 		log.Println("client connected")
-		do(conn)
+		go do(conn)
 
 	}
 
