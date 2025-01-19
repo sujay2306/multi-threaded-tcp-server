@@ -7,8 +7,8 @@
 
 
 #### Parallel Processing 
-<video width="640" height="360" controls>
-  <source src="parallel.mov" type="video/mp4">
-</video>
+(https://raw.githubusercontent.com/sujay2306/multi-threaded-tcp-server/main/parallel.mp4)
+
+
 
 
