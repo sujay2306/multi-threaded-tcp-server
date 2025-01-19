@@ -14,7 +14,8 @@ func do(conn net.Conn){
 	if err != nil {
 		log.Fatal(err)
 	}
-	time.Sleep(1 * time.Second) //wait for 1 sec
+	log.Println("processing the request")
+	time.Sleep(8 * time.Second) //wait for 1 sec
 	conn.Write([] byte ("HTTP/1.1 200 OK\r\n\r\nHello I'm TCP Server!!!\r\n"))
 	conn.Close()
 }
@@ -25,10 +26,15 @@ func main(){
 		log.Fatal(err)
 	}
 	
-	conn,err := listener.Accept()
-	if err != nil {
-		log.Fatal(err)
+	for{
+		log.Println("waiting for client connection")
+		conn,err := listener.Accept()
+		if err != nil {
+			log.Fatal(err)
+		}
+		log.Println("client connected")
+		do(conn)
+
 	}
-	do(conn)
 
 }
