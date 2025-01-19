@@ -2,13 +2,23 @@
 
 This Go TCP server accepts incoming connections, processes basic HTTP requests, and sends back responses. The server demonstrates key concepts like socket programming and system calls. It handles incoming connections, reads requests, processes them, and sends responses. However, the initial version of the server could only handle one connection at a time due to its single-threaded nature.
 
-Key Concepts:
+### Key Concepts
 
-Raw Socket Programming: The server uses Go’s net package to create a TCP socket and listen for connections.
-System Calls: The server interacts with the operating system to accept connections, read requests, and send responses.
-Basic HTTP Handling: The server reads simple HTTP requests and sends back basic HTTP responses.
-Single-threaded Limitation: The server processes requests one by one and can’t handle multiple connections at once.
-To improve this, I have made use goroutines (Go's lightweight threads) to allow the server to handle multiple requests at the same time.
+- **Raw Socket Programming:**  
+  The server uses Go’s `net` package to create a TCP socket and listen for incoming connections.
+
+- **System Calls:**  
+  The server interacts with the operating system to accept connections, read requests, and send responses.
+
+- **Basic HTTP Handling:**  
+  The server reads simple HTTP requests and sends back basic HTTP responses.
+
+- **Single-threaded Limitation:**  
+  The server processes requests one by one and can’t handle multiple connections simultaneously.
+
+- **Concurrency with Goroutines:**  
+  To improve performance, the server uses **goroutines** (Go's lightweight threads) to handle multiple requests at the same time.
+
 
 #### Sequencial Processing 
 
